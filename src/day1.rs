@@ -1,4 +1,4 @@
-fn setup(input: String) -> (Vec<i64>, Vec<i64>)
+fn setup(input: &str) -> (Vec<i64>, Vec<i64>)
 {
     let lines = input.split("\n").collect::<Vec<&str>>();
     let mut col1 = Vec::new();
@@ -24,7 +24,7 @@ fn setup(input: String) -> (Vec<i64>, Vec<i64>)
     (col1, col2)
 }
 
-pub fn p1(input: String) -> i64
+pub fn p1(input: &str) -> i64
 {
     let (col1, col2) = setup(input); 
 
@@ -37,9 +37,9 @@ pub fn p1(input: String) -> i64
     result
 }
 
-pub fn p2(input: String) -> i64
+pub fn p2(input: &str) -> i64
 {
-    let (col1, col2) = setup(input); 
+    let (col1, col2) = setup(&input); 
 
     let mut result: i64 = 0;
     let (mut i, mut j) = (0, 0);

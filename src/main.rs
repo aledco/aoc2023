@@ -3,6 +3,7 @@ use std::fs;
 
 mod day1;
 mod day2;
+mod day3;
 
 fn main()
 {
@@ -23,6 +24,8 @@ fn run(input: &str, day: i32, part: i32) -> i64
         (1, 2) => day1::p2(input),
         (2, 1) => day2::p1(input),
         (2, 2) => day2::p2(input),
+        (3, 1) => day3::p1(input),
+        (3, 2) => day3::p2(input),
         _ => panic!("invalid day/part")
     }
 }
